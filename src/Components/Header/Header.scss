@@ -8,11 +8,13 @@ header, .Header__Nav
 header
 {
   width:100%;
+  margin: auto;
   padding: 0;
   justify-content: space-between;
   align-items: center;
   font-size: 10px;
   color:$Color;
+  border:1px solid red;
 
   .Header__Logo
   {
@@ -72,6 +74,7 @@ header
   }
   @media (min-width : 1440px)
   {
+    width:1240px;
     font-size: 24px;
   }
 
