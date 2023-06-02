@@ -11,5 +11,21 @@ body
 {
   width:100%;
   font-family: "Montserrat", sans-serif;
+  padding: 20px;
 
+  @media (min-width: 800px)
+  {
+    padding-left:50px;
+    padding-right: 50px;
+  }
+  @media (min-width: 1000px)
+  {
+    padding-left:80px;
+    padding-right: 80px;
+  }
+  @media (min-width: 1440px)
+  {
+    padding-left:100px;
+    padding-right: 100px;
+  }
 }

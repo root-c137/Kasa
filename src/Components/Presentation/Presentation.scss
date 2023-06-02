@@ -1,0 +1,97 @@
+
+
+.Presentation, .Background__ImageBg
+{
+  width:100%;
+  border-radius: 10px;
+}
+.Presentation
+{
+  height:111px;
+  margin:auto;
+  margin-top:42px;
+  padding:0;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  position: relative;
+  mix-blend-mode: darken;
+  background: #000;
+
+
+  .Background__ImageBg
+    {
+      position:absolute;
+      height:100%;
+      top:0;
+      left:0;
+      border-radius: 10px;
+      object-fit: cover;
+      object-position: center;
+      opacity: 0.8;
+
+
+      @media (min-width: 1440px)
+      {
+        border-radius: 25px;
+      }
+    }
+
+  .Presentation__WelcomeTxt
+  {
+
+    font-size: 23px;
+    font-weight: 500;
+    width:217px;
+    color:#fff;
+    margin-left:26px;
+    z-index: 1;
+    line-height: 100%;
+
+    @media (min-width: 550px)
+    {
+      font-size: 26px;
+      width:100%;
+      text-align: center;
+    }
+
+    @media (min-width: 800px)
+    {
+      font-size: 30px;
+      width:100%;
+    }
+    @media (min-width: 1240px)
+    {
+      width:100%;
+      font-size: 48px;
+    }
+
+  }
+
+  @media (min-width: 500px)
+  {
+    height:130px;
+  }
+
+  @media (min-width: 550px)
+  {
+    justify-content: center;
+  }
+
+  @media (min-width: 700px)
+  {
+    height:180px;
+  }
+  @media (min-width: 1000px)
+  {
+    height:200px;
+  }
+
+  @media (min-width: 1440px)
+  {
+    width:1240px;
+    height:223px;
+    border-radius: 25px;
+  }
+
+}
