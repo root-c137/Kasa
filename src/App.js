@@ -1,10 +1,12 @@
 import './Reset.css';
 import './App.scss';
 
+import {Header} from "./Components/Header/Header";
+
 function App() {
   return (
     <div className="App">
-      <p>CC</p>
+      <Header />
     </div>
   );
 }
