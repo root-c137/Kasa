@@ -10,13 +10,15 @@
 body
 {
   width:100%;
-  height:100vh;
+  min-height:90vh;
   font-family: "Montserrat", sans-serif;
 }
 
 .Container
 {
+  height:100%;
   padding:30px 20px;
+  position: relative;
 
   @media (min-width: 700px)
   {

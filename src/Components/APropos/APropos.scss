@@ -1,0 +1,162 @@
+
+
+
+.APropos
+{
+  width:100%;
+  height: calc(100vh - 372px);
+  margin:auto;
+  margin-top: 23px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left:20px;
+  padding-right:20px;
+
+    .BackgroundCard
+    {
+      width: 100%;
+      height: 223px;
+      background: #000;
+      mix-blend-mode: darken;
+      position: relative;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 19px;
+
+      .BackgroundCard__Img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+      }
+
+      @media (min-width: 1440px)
+      {
+        border-radius: 25px;
+      }
+    }
+
+    .AProposList
+    {
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top:19px;
+
+      @media (min-width: 1200px) {
+        margin-top: 38px;
+      }
+
+
+      .AProposList__Section
+      {
+        width:100%;
+        position: relative;
+        margin-bottom: 20px;
+
+
+        .AProposList__Title
+        {
+
+          width:100%;
+          padding: 10px 0px 10px 10px;
+          font-size: 13px;
+          font-weight: 500;
+          background-color: #FF6060;
+          color:#FFF;
+          border-radius: 5px;
+
+          @media (min-width: 500px)
+          {
+            font-size : 16px;
+            padding: 10px 15px;
+          }
+          @media (min-width: 1200px)
+          {
+            font-size : 24px;
+          }
+
+        }
+
+        .Arrow
+        {
+          position: absolute;
+          top:10px;
+          right:12px;
+          width:16px;
+          height:9px;
+          cursor:pointer;
+          transition: transform 0.4s ease-in-out;
+          transition-delay: 0s;
+
+          @media (min-width: 500px)
+          {
+            width:24px;
+            height:13px;
+          }
+          @media (min-width: 1200px)
+          {
+            top:18px;
+          }
+
+          &--CurrentArticle
+          {
+            transform: rotate(-180deg);
+          }
+        }
+      }
+
+      .Article, .Article__Title
+      {
+        border-radius: 0 0 5px 5px;
+      }
+      .Article
+        {
+          width:100%;
+          max-height: 0;
+          overflow: hidden;
+          background-color: #F6F6F6;
+          padding: 0;
+          transition: max-height,padding 0.4s ease-in-out;
+          transition-delay: 0s;
+
+        &--Open
+          {
+            max-height: 500px;
+            padding: 13px 20px 19px;
+        }
+
+          .Article__Txt
+          {
+            font-size: 12px;
+            color: #FF6060;
+            font-weight: 400;
+
+
+            @media (min-width: 500px)
+            {
+              font-size : 14px;
+            }
+            @media (min-width: 1200px)
+            {
+              font-size : 18px;
+            }
+          }
+
+        }
+
+
+    }
+
+    @media (min-width: 1440px)
+    {
+      width:1240px;
+      margin-top: 38px;
+    }
+
+
+}
+
