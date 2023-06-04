@@ -1,0 +1,300 @@
+
+
+.Logement
+{
+  width:100%;
+  min-height: calc(100vh - 372px);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+  margin-top: 30px;
+  padding: 0 20px;
+
+    .Carrousel
+    {
+      width:100%;
+      height:255px;
+      padding:0;
+      position:relative;
+      mix-blend-mode: normal;
+
+
+      @media (min-width: 400px)
+      {
+        height:355px;
+      }
+      @media (min-width: 1440px)
+      {
+        width: 1240px;
+        height: 415px;
+        border-radius: 25px;
+      }
+
+      .Carrousel__Button
+      {
+        position:absolute;
+        width:12px;
+        height:20px;
+        top:50%;
+        transform: translate(0, -50%);
+        cursor : pointer;
+
+        &--Left
+        {
+          left : 6px;
+        }
+        &--Right
+        {
+          right : 6px;
+        }
+
+
+        @media (min-width: 400px)
+        {
+          width : 20px;
+          height: 40px;
+        }
+        @media (min-width: 1440px)
+        {
+          width : 47px;
+          height: 80px;
+
+          &--Left
+          {
+            left : 24px;
+          }
+          &--Right
+          {
+            right : 24px;
+          }
+        }
+      }
+      .Carrousel__Picture
+      {
+        width:100%;
+        height:100%;
+        object-fit: cover;
+        border-radius: 10px;
+
+      }
+    }
+
+
+
+
+    .LogementInfos, .LogementInfos__TagList, .InfosAndAuthor
+    {
+      width:100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-items: center;
+      padding-top: 15px;
+
+
+      .LogementInfos__Title, .LogementInfos__Location
+      {
+        width:100%;
+        font-size : 18px;
+        font-weight: 500;
+        line-height: 142.6%;
+        align-items: flex-end;
+
+        @media (min-width: 1440px)
+        {
+          font-size : 36px;
+        }
+      }
+
+
+
+      .LogementInfos__Location
+      {
+        padding-top: 5px;
+        font-size: 14px;
+        font-weight: normal;
+
+        @media (min-width: 1440px)
+        {
+          font-size: 18px;
+        }
+      }
+
+      .LogementInfos__TagList
+      {
+        flex-direction: row;
+        align-self: flex-start;
+        gap: 10px;
+
+        .TagList__Tag
+        {
+          padding:4px 30px;
+          background-color: #FF6060;
+          border-radius : 5px;
+          color: #fff;
+          font-size: 10px;
+          font-weight: 500;
+
+          @media (min-width: 400px)
+          {
+            font-size: 12px;
+            padding : 8px 30px;
+            border-radius: 10px;
+          }
+          @media (min-width: 1440px)
+          {
+            font-size: 14px;
+
+          }
+        }
+      }
+
+      @media (min-width: 1440px)
+      {
+
+          width : 90%;
+
+      }
+
+    }
+
+    .InfosAndAuthor
+    {
+      padding-top : 0;
+
+      @media (min-width: 1440px)
+      {
+        width:1240px;
+        flex-direction: row;
+        justify-content: space-between;
+      }
+    }
+
+    .AuthorAndRating, .AuthorAndRating__Author
+    {
+      width : 100%;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .AuthorAndRating
+    {
+      padding-top:27px;
+
+      @media (min-width: 1440px)
+      {
+        width : 25%;
+        flex-direction: column-reverse;
+      }
+    }
+
+    .AuthorAndRating__Rating
+    {
+      display: flex;
+      flex-direction: row;
+      gap: 6px;
+
+      .Rating__Star
+      {
+        width : 13px;
+
+        @media (min-width: 600px)
+        {
+          width : 18px;
+        }
+        @media (min-width: 1440px)
+        {
+          width : 24px;
+          margin-top: 30px;
+        }
+      }
+
+      @media (min-width: 600px)
+      {
+        gap : 9px;
+      }
+      @media (min-width: 1440px)
+      {
+        gap : 15px;
+      }
+    }
+    .AuthorAndRating__Author
+    {
+      width:135px;
+      height:33px;
+      justify-content: flex-end;
+
+      .Author__Name
+      {
+        width:80px;
+        font-size: 12px;
+        font-weight: 500;
+        align-items: flex-end;
+        text-align: right;
+        word-break: break-word;
+        padding-right: 10px;
+        line-height: 142.6%;
+
+        @media (min-width: 600px)
+        {
+          font-size: 15px;
+        }
+        @media (min-width: 1440px)
+        {
+          width:100%;
+          font-size: 18px;
+        }
+      }
+      .Author__Picture
+      {
+        width:32px;
+        border-radius: 100%;
+
+        @media (min-width: 600px)
+        {
+          width : 50px;
+        }
+        @media (min-width : 1440px)
+        {
+          width : 64px;
+        }
+      }
+
+      @media (min-width: 1440px)
+      {
+        width : 190px;
+      }
+    }
+
+
+  .Collapses
+  {
+    display: flex;
+    flex-direction: column;
+    padding-top : 22px;
+
+    .Collapse
+    {
+      width :  100%;
+
+      @media (min-width: 1440px)
+      {
+        width : 582px;
+      }
+    }
+
+    @media (min-width: 1440px)
+    {
+      width : 1240px;
+      flex-direction: row;
+      justify-content: space-between;
+      padding-top: 26px;
+
+    }
+  }
+
+}
+

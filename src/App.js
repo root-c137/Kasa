@@ -15,11 +15,6 @@ class App extends React.Component
         this.Logemements = LogementsJSON;
     }
 
-    componentDidMount() {
-
-        console.log(LogementsJSON);
-
-    }
 
 
     render()
