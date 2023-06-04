@@ -12,7 +12,7 @@ export const Gallery = ({Logements}) =>
             {
                 Logements.map((Logement, index) =>
                         <div className="Gallery__Card" key={Logement.id}>
-                            <Link to={
+                            <Link className="Gallery__Card__Link" to={
                                 "/logement/" + Logement.title.toLowerCase()
                                         .replace(/[^a-z0-9]+/g, '-')
                                         .replace(/(^-|-$)+/g, '')

@@ -30,14 +30,21 @@ $Gallery_Bg : #F6F6F6;
     mix-blend-mode: darken;
     position:relative;
 
+    .Gallery__Card__Link
+    {
+      text-decoration: none;
+      z-index: 1;
+
+    }
+
     .Card__Title
     {
-      width:50%;
+      width:70%;
       line-height: 25px;
       font-size: 18px;
       font-weight: 500;
       color:#FFF;
-      z-index: 1;
+
     }
 
     .Card__Img
