@@ -57,10 +57,18 @@ export const Logement = ({props}) =>
         <div className="Logement">
 
             <div className="Carrousel">
-                <img className="Carrousel__Button  Carrousel__Button--Left" src={LeftArrow}
-                onClick={onPrev}/>
-                <img className="Carrousel__Button Carrousel__Button--Right" src={RightArrow}
-                     onClick={onNext} />
+
+                {
+                       CurrentLogement !== "" && CurrentLogement.pictures.length > 1 ?
+                        <>
+                               <img className="Carrousel__Button  Carrousel__Button--Left" src={LeftArrow}
+                             onClick={onPrev} />
+                               <img className="Carrousel__Button Carrousel__Button--Right" src={RightArrow}
+                             onClick={onNext} />
+                        </>
+                    :
+                    ""
+                }
 
                 {CurrentLogement !== "" ?
                     <img className="Carrousel__Picture" src={CurrentLogement.pictures[CarrouselIndex]}/>
