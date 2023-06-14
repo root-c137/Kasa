@@ -63,8 +63,7 @@ export const Logement = ({props}) =>
                      onClick={onNext} />
 
                 {CurrentLogement !== "" ?
-                    <img className="Carrousel__Picture" src={CurrentLogement.pictures[CarrouselIndex]}
-                     key={CurrentLogement.pictures[CarrouselIndex]} />
+                    <img className="Carrousel__Picture" src={CurrentLogement.pictures[CarrouselIndex]}/>
                     :
                     ""
                 }
