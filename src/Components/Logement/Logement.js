@@ -30,7 +30,6 @@ export const Logement = ({props}) =>
             }
         });
 
-        console.log(CurrentLogement);
     })
 
 

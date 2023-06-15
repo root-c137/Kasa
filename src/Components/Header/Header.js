@@ -15,8 +15,6 @@ export const Header = () =>
 
     useEffect( () =>
     {
-        console.log(Location.pathname);
-
         if(Location.pathname === "/")
         {
             setAddClassHome(CurrentLinkClass);
@@ -25,6 +23,10 @@ export const Header = () =>
         if(Location.pathname === "/a-propos")
         {
             setAddClassAPropos(CurrentLinkClass);
+            setAddClassHome("");
+        }
+        if(Location.pathname !== "/" && Location.pathname !== "a-propos")
+        {
             setAddClassHome("");
         }
     })
