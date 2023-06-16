@@ -1,10 +1,10 @@
-import './Reset.css';
+import '../../Reset.css';
 import './App.scss';
 
 import React, { Component } from 'react';
-import {Presentation} from "./Components/Presentation/Presentation";
-import {LogementsList} from "./Components/LogementsList/LogementsList.js";
-import LogementsJSON from "./Json/Logements.json";
+import {Presentation} from "../../Components/Presentation/Presentation";
+import {LogementsList} from "../../Components/LogementsList/LogementsList.js";
+import LogementsJSON from "../../Json/Logements.json";
 
 class App extends React.Component
 {
