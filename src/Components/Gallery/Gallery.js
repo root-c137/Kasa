@@ -1,34 +1,53 @@
 
 
-import "./Gallery.scss";
-import {Link} from "react-router-dom";
+import "../LogementsList/LogementsList.scss";
+import LeftArrow from "../../Images/LeftArrow.svg";
+import RightArrow from "../../Images/RightArrow.svg";
+import {useState} from "react";
 
 
-export const Gallery = ({Logements}) =>
+export const Gallery = ({pictures}) =>
 {
+
+    const [CarrouselIndex, setCarrouselIndex] = useState(0);
+
+    const onNext = () =>
+    {
+        if(CarrouselIndex < pictures.length - 1)
+            setCarrouselIndex(CarrouselIndex + 1);
+        else
+            setCarrouselIndex(0);
+
+    }
+
+    const onPrev = () =>
+    {
+        if(CarrouselIndex > 0)
+            setCarrouselIndex(CarrouselIndex - 1 );
+        else
+            setCarrouselIndex(pictures.length - 1);
+
+    }
+
+
     return(
-        <section className="Gallery">
+        <div className="Carrousel">
 
             {
-                Logements.map((Logement, index) =>
-                        <div className="Gallery__Card" key={Logement.id}>
-                            <Link className="Gallery__Card__Link" to={
-                                "/logement/" + Logement.title.toLowerCase()
-                                        .replace(/[^a-z0-9]+/g, '-')
-                                        .replace(/(^-|-$)+/g, '')
-                                }
-
-                                  state={{id: Logement.id}}
-                            >
-                                <img className="Card__Img" src={Logement.cover} />
-                                <h2 className="Card__Title">{Logement.title}</h2>
-                            </Link>
-                        </div>
-                )
-
+                    pictures.length > 1 ?
+                    <>
+                        <img className="Carrousel__Button  Carrousel__Button--Left" src={LeftArrow}
+                             onClick={onPrev} />
+                        <img className="Carrousel__Button Carrousel__Button--Right" src={RightArrow}
+                             onClick={onNext} />
+                    </>
+                    :
+                    ""
             }
 
-        </section>
+                <img className="Carrousel__Picture" src={pictures[CarrouselIndex]}/>
+
+        </div>
     );
 }
 

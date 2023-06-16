@@ -2,7 +2,7 @@
 
 import "./APropos.scss";
 import BackgroundImg from "../../Images/APropos_Bg.png";
-import {Collapse} from "../Collapse/Collapse";
+import {Collapse} from "../../Components/Collapse/Collapse";
 
 export const APropos = () =>
 {

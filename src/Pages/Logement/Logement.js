@@ -9,14 +9,14 @@ import StarRed from "../../Images/Star_Red.svg";
 
 import LogementsJSON from "../../Json/Logements.json";
 import {useEffect, useState} from "react";
-import {Collapse} from "../Collapse/Collapse";
+import {Collapse} from "../../Components/Collapse/Collapse";
+import {Gallery} from "../../Components/Gallery/Gallery";
 
 
 export const Logement = ({props}) =>
 {
     const Logements = LogementsJSON;
     const [CurrentLogement, setCurrentLogement] = useState("");
-    const [CarrouselIndex, setCarrouselIndex] = useState(0);
     const [Rating, setRating] = useState(0);
     const Location = useLocation();
     const Id = Location.state.id;
@@ -33,49 +33,12 @@ export const Logement = ({props}) =>
     })
 
 
-    const onNext = () =>
-    {
-        if(CarrouselIndex < CurrentLogement.pictures.length - 1)
-            setCarrouselIndex(CarrouselIndex + 1);
-        else
-            setCarrouselIndex(0);
-
-    }
-
-    const onPrev = () =>
-    {
-        if(CarrouselIndex > 0)
-            setCarrouselIndex(CarrouselIndex - 1 );
-        else
-            setCarrouselIndex(CurrentLogement.pictures.length - 1);
-
-    }
-
 
     return (
         <div className="Logement">
 
-            <div className="Carrousel">
 
-                {
-                       CurrentLogement !== "" && CurrentLogement.pictures.length > 1 ?
-                        <>
-                               <img className="Carrousel__Button  Carrousel__Button--Left" src={LeftArrow}
-                             onClick={onPrev} />
-                               <img className="Carrousel__Button Carrousel__Button--Right" src={RightArrow}
-                             onClick={onNext} />
-                        </>
-                    :
-                    ""
-                }
-
-                {CurrentLogement !== "" ?
-                    <img className="Carrousel__Picture" src={CurrentLogement.pictures[CarrouselIndex]}/>
-                    :
-                    ""
-                }
-
-            </div>
+            <Gallery pictures={CurrentLogement !== "" ? CurrentLogement.pictures : 0} />
 
             <div className="InfosAndAuthor">
 

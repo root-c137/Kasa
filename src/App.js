@@ -3,7 +3,7 @@ import './App.scss';
 
 import React, { Component } from 'react';
 import {Presentation} from "./Components/Presentation/Presentation";
-import {Gallery} from "./Components/Gallery/Gallery";
+import {LogementsList} from "./Components/LogementsList/LogementsList.js";
 import LogementsJSON from "./Json/Logements.json";
 
 class App extends React.Component
@@ -25,7 +25,7 @@ class App extends React.Component
 
                 <div className="Container">
                     <Presentation />
-                    <Gallery Logements={this.Logemements}/>
+                    <LogementsList Logements={this.Logemements}/>
                 </div>
 
             </div>
