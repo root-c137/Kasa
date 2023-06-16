@@ -10,11 +10,14 @@ $Card_Bg : #000;
   margin-top:22px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   background-color: $Gallery_Bg;
   border-radius: 25px;
   gap:20px;
+  padding:40px;
+
+
 
 
   .Gallery__Card
@@ -89,6 +92,7 @@ $Card_Bg : #000;
     flex-wrap: wrap;
     padding-top:56px;
     padding-bottom:56px;
+
 
   }
   @media (min-width: 900px)

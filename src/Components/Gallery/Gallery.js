@@ -1,6 +1,6 @@
 
 
-import "../LogementsList/LogementsList.scss";
+import "./Gallery.scss";
 import LeftArrow from "../../Images/LeftArrow.svg";
 import RightArrow from "../../Images/RightArrow.svg";
 import {useState} from "react";
