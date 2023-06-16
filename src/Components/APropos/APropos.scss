@@ -4,7 +4,7 @@
 .APropos
 {
   width:100%;
-  height: calc(100vh - 372px);
+  min-height: calc(100vh - 372px);
   margin:auto;
   margin-top: 23px;
   display: flex;

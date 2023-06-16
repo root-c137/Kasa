@@ -19,7 +19,7 @@ export const Logement = ({props}) =>
     const [CarrouselIndex, setCarrouselIndex] = useState(0);
     const [Rating, setRating] = useState(0);
     const Location = useLocation();
-    const Id = Location.state?.id;
+    const Id = Location.state.id;
 
     useEffect(() => {
 
